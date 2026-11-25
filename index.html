@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>超凡影业短剧罪虐都市_都市罪案短剧官方平台_超凡影业原创短剧</title>
+<meta name="description" content="超凡影业短剧罪虐都市官方网站，专注都市罪案与情感悬疑短剧的原创内容平台，提供高清正版短剧、创作者社区与企业动态，深耕都市短剧垂直领域。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a24'/%3E%3Cpath d='M20 18h24v6H20zm0 12h18v6H20zm0 12h24v6H20z' fill='%23ff4d4d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --cfy-ink:#101820;
+  --cfy-ink-2:#1c2733;
+  --cfy-ink-3:#2c3a48;
+  --cfy-line:#d8dee6;
+  --cfy-paper:#f4f6f9;
+  --cfy-white:#ffffff;
+  --cfy-red:#d92c3a;
+  --cfy-red-deep:#a81d29;
+  --cfy-gold:#c99a3f;
+  --cfy-mute:#5d6b78;
+  --cfy-radius:14px;
+  --cfy-shadow:0 10px 30px rgba(16,24,32,.09);
+  --cfy-sticky:150px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--cfy-ink);
+  background:var(--cfy-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+section[id],div[id].cfy-anchor{scroll-margin-top:var(--cfy-sticky);}
+
+/* ---------- 公告 + 页头 ---------- */
+.cfy-sticky-shell{position:sticky;top:0;z-index:80;}
+.cfy-notice{
+  background:linear-gradient(90deg,var(--cfy-ink) 0%,var(--cfy-ink-2) 60%,var(--cfy-red-deep) 100%);
+  color:#fff;font-size:13px;letter-spacing:.2px;
+}
+.cfy-notice-inner{
+  max-width:1240px;margin:0 auto;padding:8px 22px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.cfy-notice-tag{
+  background:var(--cfy-red);color:#fff;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:4px;letter-spacing:1px;flex:none;
+}
+.cfy-notice-txt{flex:1;min-width:200px;color:#e7ecf2;}
+.cfy-notice-txt b{color:#ffc9c9;font-weight:600;}
+.cfy-notice-link{color:#fff;border-bottom:1px dashed rgba(255,255,255,.55);white-space:nowrap;font-size:12px;}
+
+.cfy-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--cfy-line);}
+.cfy-header-inner{
+  max-width:1240px;margin:0 auto;padding:0 22px;
+  display:flex;align-items:center;gap:26px;height:66px;
+}
+.cfy-brand{display:flex;align-items:center;gap:10px;flex:none;}
+.cfy-brand-mark{
+  width:38px;height:38px;border-radius:10px;background:var(--cfy-ink);
+  display:grid;place-items:center;flex:none;
+}
+.cfy-brand-mark svg{width:22px;height:22px;}
+.cfy-brand-name{font-size:19px;font-weight:800;letter-spacing:1px;}
+.cfy-brand-name em{font-style:normal;color:var(--cfy-red);}
+.cfy-brand-sub{display:block;font-size:10px;color:var(--cfy-mute);letter-spacing:3px;font-weight:400;margin-top:-4px;}
+
+.cfy-nav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;}
+.cfy-nav a{
+  font-size:14px;color:var(--cfy-ink-3);padding:8px 12px;border-radius:8px;
+  transition:background .2s,color .2s;white-space:nowrap;
+}
+.cfy-nav a:hover{background:#eef1f5;color:var(--cfy-red);}
+
+.cfy-search{position:relative;flex:none;width:250px;}
+.cfy-search input{
+  width:100%;height:38px;border:1px solid var(--cfy-line);border-radius:99px;
+  padding:0 40px 0 16px;font-size:13px;background:#f7f9fb;outline:none;color:var(--cfy-ink);
+  transition:border-color .2s,background .2s;
+}
+.cfy-search input:focus{border-color:var(--cfy-red);background:#fff;}
+.cfy-search-btn{
+  position:absolute;right:4px;top:4px;width:30px;height:30px;border:none;border-radius:50%;
+  background:var(--cfy-ink);display:grid;place-items:center;
+}
+.cfy-search-btn svg{width:14px;height:14px;}
+.cfy-search-hint{
+  position:absolute;left:0;right:0;top:44px;background:#fff;border:1px solid var(--cfy-line);
+  border-radius:12px;box-shadow:var(--cfy-shadow);padding:8px;font-size:13px;display:none;z-index:90;
+}
+.cfy-search-hint.on{display:block;}
+.cfy-search-hint p{margin:0;padding:8px 10px;border-radius:8px;color:var(--cfy-mute);}
+.cfy-search-hint p.hit{background:#fff2f3;color:var(--cfy-red-deep);font-weight:600;}
+.cfy-search-hint p.err{color:#8a5a12;}
+
+.cfy-burger{display:none;width:40px;height:40px;border:1px solid var(--cfy-line);border-radius:10px;background:#fff;flex:none;}
+.cfy-burger span{display:block;width:18px;height:2px;background:var(--cfy-ink);margin:4px auto;transition:.25s;}
+.cfy-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.cfy-burger.open span:nth-child(2){opacity:0;}
+.cfy-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+/* ---------- 首屏 ---------- */
+.cfy-hero{
+  background:radial-gradient(1200px 500px at 75% -10%,rgba(217,44,58,.16),transparent 60%),
+             linear-gradient(180deg,#141d27 0%,#1d2935 100%);
+  color:#fff;overflow:hidden;
+}
+.cfy-hero-inner{
+  max-width:1240px;margin:0 auto;padding:56px 22px 64px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;
+}
+.cfy-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;
+  color:#ffb3b8;border:1px solid rgba(255,120,130,.4);border-radius:99px;padding:4px 14px;margin-bottom:20px;
+}
+.cfy-hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--cfy-red);font-style:normal;display:block;}
+h1.cfy-hero-title{
+  font-size:clamp(30px,4.3vw,52px);line-height:1.18;margin:0 0 8px;font-weight:900;letter-spacing:1px;
+}
+h1.cfy-hero-title .cfy-hl{
+  background:linear-gradient(180deg,transparent 62%,rgba(217,44,58,.55) 62%);
+  padding:0 2px;
+}
+.cfy-hero-slogan{font-size:16px;color:#b7c3cf;margin:0 0 18px;letter-spacing:.5px;}
+.cfy-hero-intro{font-size:14.5px;color:#a9b6c3;margin:0 0 26px;max-width:560px;text-align:justify;}
+.cfy-hero-intro strong{color:#fff;font-weight:600;}
+.cfy-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;}
+.cfy-btn{
+  display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+  padding:11px 22px;border-radius:99px;border:1px solid transparent;transition:.2s;line-height:1;
+}
+.cfy-btn-primary{background:var(--cfy-red);color:#fff;box-shadow:0 8px 20px rgba(217,44,58,.32);}
+.cfy-btn-primary:hover{background:var(--cfy-red-deep);transform:translateY(-1px);}
+.cfy-btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}
+.cfy-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.cfy-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:520px;}
+.cfy-stat{border-left:2px solid rgba(255,255,255,.16);padding-left:14px;}
+.cfy-stat b{display:block;font-size:26px;font-weight:800;color:#fff;letter-spacing:.5px;}
+.cfy-stat b small{font-size:13px;font-weight:500;color:#ffb3b8;margin-left:2px;}
+.cfy-stat span{font-size:12px;color:#8d9dab;letter-spacing:1px;}
+
+.cfy-hero-visual{position:relative;}
+.cfy-hero-visual .cfy-hero-frame{
+  border-radius:18px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.12);position:relative;aspect-ratio:4/3.1;background:#0f1720;
+}
+.cfy-hero-visual svg{width:100%;height:100%;display:block;}
+.cfy-hero-badge{
+  position:absolute;left:16px;bottom:16px;background:rgba(9,14,20,.82);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:9px 14px;font-size:12px;color:#dfe7ee;
+  display:flex;align-items:center;gap:10px;
+}
+.cfy-hero-badge b{color:#fff;font-size:13px;}
+.cfy-hero-badge .cfy-play-dot{width:26px;height:26px;border-radius:50%;background:var(--cfy-red);display:grid;place-items:center;flex:none;}
+.cfy-hero-badge .cfy-play-dot svg{width:10px;height:10px;}
+.cfy-hero-float{
+  position:absolute;right:-10px;top:-16px;background:#fff;color:var(--cfy-ink);border-radius:12px;
+  padding:10px 14px;font-size:12px;box-shadow:0 14px 34px rgba(0,0,0,.35);line-height:1.5;
+}
+.cfy-hero-float b{display:block;color:var(--cfy-red);font-size:15px;}
+
+/* ---------- 通用板块 ---------- */
+.cfy-section{max-width:1240px;margin:0 auto;padding:64px 22px;}
+.cfy-section-head{margin-bottom:32px;max-width:760px;}
+.cfy-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:3px;
+  color:var(--cfy-red);text-transform:uppercase;margin-bottom:10px;
+}
+.cfy-kicker::before{content:"";width:24px;height:2px;background:var(--cfy-red);display:block;}
+.cfy-section h2{font-size:clamp(23px,2.8vw,32px);margin:0 0 12px;line-height:1.3;font-weight:800;letter-spacing:.5px;}
+.cfy-section-desc{margin:0;color:var(--cfy-mute);font-size:14px;text-align:justify;}
+.cfy-alt{background:#fff;}
+
+/* ---------- 焦点内容 ---------- */
+.cfy-focus-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;}
+.cfy-focus-main{
+  background:#fff;border-radius:var(--cfy-radius);overflow:hidden;box-shadow:var(--cfy-shadow);
+  display:flex;flex-direction:column;border:1px solid #eaeef3;
+}
+.cfy-focus-main figure{margin:0;position:relative;aspect-ratio:16/9;background:#0f1720;overflow:hidden;}
+.cfy-focus-main figure svg{width:100%;height:100%;}
+.cfy-focus-main .cfy-fig-cap{
+  position:absolute;left:14px;bottom:14px;background:rgba(9,14,20,.78);color:#fff;font-size:12px;
+  padding:5px 12px;border-radius:99px;letter-spacing:1px;
+}
+.cfy-focus-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;}
+.cfy-tagrow{display:flex;gap:8px;flex-wrap:wrap;}
+.cfy-tag{
+  font-size:11.5px;padding:2px 10px;border-radius:99px;background:#f0f3f7;color:var(--cfy-ink-3);
+  border:1px solid #e4e9ef;letter-spacing:.5px;
+}
+.cfy-tag.red{background:#fff1f2;color:var(--cfy-red-deep);border-color:#ffd6d9;}
+.cfy-focus-body h3{margin:0;font-size:21px;line-height:1.4;font-weight:800;}
+.cfy-focus-body p{margin:0;font-size:13.5px;color:var(--cfy-mute);text-align:justify;}
+.cfy-meta{display:flex;align-items:center;gap:16px;font-size:12.5px;color:var(--cfy-mute);flex-wrap:wrap;}
+.cfy-meta .cfy-author-dot{
+  width:24px;height:24px;border-radius:50%;background:var(--cfy-ink);color:#fff;font-size:11px;
+  display:grid;place-items:center;font-weight:700;
+}
+.cfy-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+.cfy-chip{
+  border:1px solid var(--cfy-line);background:#fff;border-radius:99px;padding:6px 14px;font-size:12.5px;
+  display:inline-flex;align-items:center;gap:6px;color:var(--cfy-ink-3);transition:.2s;
+}
+.cfy-chip:hover{border-color:var(--cfy-red);color:var(--cfy-red);}
+.cfy-chip.on{background:#fff1f2;border-color:var(--cfy-red);color:var(--cfy-red-deep);font-weight:600;}
+.cfy-chip svg{width:13px;height:13px;}
+
+.cfy-focus-side{display:flex;flex-direction:column;gap:14px;}
+.cfy-side-item{
+  background:#fff;border:1px solid #eaeef3;border-radius:12px;padding:16px 18px;
+  display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:14px;align-items:center;
+  transition:transform .2s,box-shadow .2s;
+}
+.cfy-side-item:hover{transform:translateY(-2px);box-shadow:var(--cfy-shadow);}
+.cfy-side-item h4{margin:0 0 5px;font-size:15px;line-height:1.45;font-weight:700;}
+.cfy-side-item p{margin:0 0 6px;font-size:12.5px;color:var(--cfy-mute);}
+.cfy-side-item .cfy-meta{font-size:11.5px;gap:10px;}
+.cfy-side-thumb{
+  width:92px;aspect-ratio:4/3;border-radius:9px;overflow:hidden;background:#0f1720;
+}
+.cfy-side-thumb svg{width:100%;height:100%;}
+
+/* ---------- 视频列表 ---------- */
+.cfy-video-list{display:grid;grid-template-columns:minmax(0,1fr);gap:0;background:#fff;border-radius:var(--cfy-radius);border:1px solid #eaeef3;overflow:hidden;box-shadow:var(--cfy-shadow);}
+.cfy-video-row{
+  display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:18px;align-items:center;
+  padding:20px 24px;border-bottom:1px solid #eef1f5;
+}
+.cfy-video-row:last-child{border-bottom:none;}
+.cfy-video-row:hover{background:#fbfcfd;}
+.cfy-rank{
+  font-size:22px;font-weight:900;color:#c9d2dc;font-style:italic;letter-spacing:-1px;text-align:center;
+}
+.cfy-video-row:nth-child(1) .cfy-rank,.cfy-video-row:nth-child(2) .cfy-rank{color:var(--cfy-red);}
+.cfy-video-main h4{margin:0 0 6px;font-size:16.5px;line-height:1.45;font-weight:700;}
+.cfy-video-main p{margin:0 0 8px;font-size:13px;color:var(--cfy-mute);text-align:justify;}
+.cfy-video-main .cfy-tagrow{margin-bottom:2px;}
+.cfy-video-op{display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
+.cfy-video-nums{font-size:11.5px;color:var(--cfy-mute);text-align:right;line-height:1.9;white-space:nowrap;}
+.cfy-video-nums b{color:var(--cfy-ink);}
+
+/* ---------- 关键词解析 ---------- */
+.cfy-parse{
+  background:linear-gradient(180deg,#fff 0%,#f7f8fa 100%);
+}
+.cfy-parse-wrap{
+  max-width:1240px;margin:0 auto;padding:64px 22px;
+  display:grid;grid-template-columns:250px minmax(0,1fr);gap:44px;align-items:start;
+}
+.cfy-parse-aside{
+  position:sticky;top:calc(var(--cfy-sticky) + 16px);
+  background:var(--cfy-ink);color:#fff;border-radius:var(--cfy-radius);padding:24px 22px;
+}
+.cfy-parse-aside h3{margin:0 0 12px;font-size:16px;letter-spacing:1px;}
+.cfy-parse-aside ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+.cfy-parse-aside li{font-size:12.5px;color:#b8c4d0;border-left:2px solid rgba(255,255,255,.18);padding-left:10px;}
+.cfy-parse-aside li b{color:#fff;display:block;font-size:13px;}
+.cfy-parse-aside .cfy-aside-note{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:11.5px;color:#8b9aa8;line-height:1.7;}
+.cfy-parse-body h2{font-size:clamp(23px,2.8vw,30px);margin:0 0 14px;font-weight:800;}
+.cfy-parse-body h3{font-size:17px;margin:26px 0 10px;color:var(--cfy-ink);padding-left:12px;border-left:3px solid var(--cfy-red);line-height:1.4;}
+.cfy-parse-body p{margin:0 0 12px;font-size:14.5px;color:#3c4956;text-align:justify;}
+.cfy-parse-body strong{color:var(--cfy-ink);}
+
+/* ---------- 专题 ---------- */
+.cfy-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.cfy-topic-card{
+  background:#fff;border-radius:var(--cfy-radius);border:1px solid #eaeef3;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;
+}
+.cfy-topic-card:hover{transform:translateY(-3px);box-shadow:var(--cfy-shadow);}
+.cfy-topic-card.wide{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);}
+.cfy-topic-fig{margin:0;background:#0f1720;aspect-ratio:16/9;overflow:hidden;}
+.cfy-topic-fig svg{width:100%;height:100%;}
+.cfy-topic-card.wide .cfy-topic-fig{aspect-ratio:auto;height:100%;min-height:250px;}
+.cfy-topic-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;min-width:0;}
+.cfy-topic-body h3{margin:0;font-size:18px;font-weight:800;line-height:1.4;}
+.cfy-topic-body p{margin:0;font-size:13.5px;color:var(--cfy-mute);text-align:justify;}
+.cfy-status{
+  align-self:flex-start;font-size:11.5px;padding:3px 11px;border-radius:99px;
+  background:#eef7ef;color:#227a3b;border:1px solid #cfe8d5;letter-spacing:.5px;
+}
+.cfy-status.soon{background:#fff6e8;color:#96631a;border-color:#f2dfbd;}
+.cfy-topic-list{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:7px;}
+.cfy-topic-list li{
+  font-size:13px;color:var(--cfy-ink-3);padding-left:16px;position:relative;line-height:1.6;
+}
+.cfy-topic-list li::before{
+  content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--cfy-red);
+}
+.cfy-topic-list li span{color:var(--cfy-mute);font-size:12px;}
+
+/* ---------- 作者矩阵 ---------- */
+.cfy-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.cfy-author-card{
+  background:#fff;border:1px solid #eaeef3;border-radius:var(--cfy-radius);padding:22px;
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;transition:border-color .2s,box-shadow .2s;
+}
+.cfy-author-card:hover{border-color:#f0c2c6;box-shadow:var(--cfy-shadow);}
+.cfy-avatar{
+  width:64px;height:64px;border-radius:50%;overflow:hidden;background:var(--cfy-ink-2);flex:none;
+  display:grid;place-items:center;
+}
+.cfy-avatar svg{width:100%;height:100%;}
+.cfy-author-info{min-width:0;}
+.cfy-author-info h3{margin:0 0 3px;font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.cfy-author-info h3 .cfy-verify{font-size:10px;background:#fff1f2;color:var(--cfy-red-deep);border:1px solid #ffd6d9;padding:1px 7px;border-radius:99px;font-weight:500;}
+.cfy-author-field{font-size:12px;color:var(--cfy-red);margin-bottom:7px;letter-spacing:.5px;}
+.cfy-author-info p{margin:0 0 10px;font-size:13px;color:var(--cfy-mute);text-align:justify;}
+.cfy-author-stats{display:flex;gap:16px;font-size:11.5px;color:var(--cfy-mute);flex-wrap:wrap;}
+.cfy-author-stats b{color:var(--cfy-ink);font-size:13px;margin-right:2px;}
+.cfy-author-more{margin-top:10px;font-size:12px;color:var(--cfy-red);border:none;background:none;padding:0;border-bottom:1px dashed #f0c2c6;}
+
+/* ---------- 评论 / 评价 ---------- */
+.cfy-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.cfy-quote{
+  background:#fff;border:1px solid #eaeef3;border-radius:var(--cfy-radius);padding:22px 22px 18px;
+  position:relative;
+}
+.cfy-quote::before{
+  content:"“";position:absolute;right:18px;top:4px;font-size:52px;line-height:1;color:#f1d4d7;font-family:Georgia,serif;
+}
+.cfy-quote p{margin:0 0 14px;font-size:13.5px;color:#3c4956;text-align:justify;position:relative;z-index:1;}
+.cfy-quote footer{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--cfy-mute);}
+.cfy-quote footer .cfy-qav{
+  width:28px;height:28px;border-radius:50%;background:var(--cfy-ink-3);color:#fff;font-size:11px;
+  display:grid;place-items:center;flex:none;font-weight:700;
+}
+.cfy-quote footer b{color:var(--cfy-ink);font-size:12.5px;font-weight:700;}
+.cfy-quote.featured{background:linear-gradient(160deg,#fff 60%,#fff4f5 100%);border-color:#f5ccd0;}
+
+/* ---------- 企业动态 ---------- */
+.cfy-news{
+  background:var(--cfy-ink);color:#fff;border-radius:var(--cfy-radius);padding:38px 34px;
+}
+.cfy-news h2{color:#fff;margin:0 0 8px;}
+.cfy-news .cfy-section-desc{color:#9aa9b7;}
+.cfy-news-list{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:2px;}
+.cfy-news-item{
+  display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:18px;align-items:baseline;
+  padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1);transition:background .2s;
+}
+.cfy-news-item:hover{background:rgba(255,255,255,.04);}
+.cfy-news-date{font-size:12px;color:#7f8fa0;letter-spacing:1px;}
+.cfy-news-item h3{margin:0;font-size:15px;font-weight:600;color:#e8eef4;line-height:1.5;}
+.cfy-news-item h3 span{color:#94a4b4;font-size:13px;font-weight:400;display:block;margin-top:2px;}
+.cfy-news-tag{font-size:11px;color:#ffb3b8;border:1px solid rgba(255,120,130,.4);padding:2px 9px;border-radius:99px;white-space:nowrap;}
+
+/* ---------- FAQ ---------- */
+.cfy-faq{display:grid;gap:10px;max-width:900px;}
+.cfy-faq details{
+  background:#fff;border:1px solid #e6ebf1;border-radius:12px;padding:0 20px;transition:border-color .2s;
+}
+.cfy-faq details[open]{border-color:#f0c2c6;}
+.cfy-faq summary{
+  cursor:pointer;font-size:15px;font-weight:700;padding:16px 0;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--cfy-ink);
+}
+.cfy-faq summary::-webkit-details-marker{display:none;}
+.cfy-faq summary::after{
+  content:"+";font-size:20px;color:var(--cfy-red);font-weight:400;transition:transform .2s;line-height:1;
+}
+.cfy-faq details[open] summary::after{content:"−";}
+.cfy-faq details p{margin:0 0 16px;font-size:13.5px;color:var(--cfy-mute);text-align:justify;}
+
+/* ---------- 合作 & 投稿 ---------- */
+.cfy-bottom-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:22px;align-items:stretch;}
+.cfy-partners{background:#fff;border:1px solid #eaeef3;border-radius:var(--cfy-radius);padding:28px;}
+.cfy-partner-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px;}
+.cfy-partner{
+  border:1px solid #edf0f4;border-radius:10px;padding:14px;font-size:13px;color:var(--cfy-ink-3);
+  display:flex;align-items:center;gap:10px;transition:.2s;background:#fbfcfd;
+}
+.cfy-partner:hover{border-color:#ddd;background:#fff;}
+.cfy-partner i{
+  width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:12px;font-style:normal;
+  color:#fff;font-weight:700;flex:none;
+}
+.cfy-submit{
+  background:linear-gradient(150deg,#202c39 0%,#131c25 100%);color:#fff;border-radius:var(--cfy-radius);
+  padding:30px;display:flex;flex-direction:column;
+}
+.cfy-submit h2{color:#fff;margin:0 0 10px;font-size:22px;}
+.cfy-submit p{color:#a3b1be;font-size:13.5px;margin:0 0 20px;text-align:justify;}
+.cfy-submit-list{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px;}
+.cfy-submit-list li{font-size:13px;color:#c7d2dc;display:flex;gap:9px;align-items:flex-start;}
+.cfy-submit-list li::before{content:"✓";color:#ff8a92;font-weight:700;flex:none;}
+.cfy-submit .cfy-btn{margin-top:auto;justify-content:center;}
+
+/* ---------- 页脚 ---------- */
+.cfy-footer{background:#0c141b;color:#8d9aa7;padding:52px 22px 26px;margin-top:20px;}
+.cfy-footer-inner{max-width:1240px;margin:0 auto;}
+.cfy-footer-top{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.7fr));gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.09);}
+.cfy-footer-brand .cfy-brand-name{color:#fff;}
+.cfy-footer-brand p{font-size:12.5px;line-height:1.85;margin:14px 0 0;max-width:330px;text-align:justify;}
+.cfy-footer-col h4{font-size:13px;color:#e6edf3;margin:0 0 14px;letter-spacing:1px;font-weight:700;}
+.cfy-footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:12.5px;}
+.cfy-footer-col a:hover{color:#fff;}
+.cfy-footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:12px;color:#63717e;}
+.cfy-footer-bottom a:hover{color:#b9c5d0;}
+
+/* ---------- 弹窗 / Toast / 回顶 ---------- */
+.cfy-modal-mask{
+  position:fixed;inset:0;background:rgba(9,14,20,.6);backdrop-filter:blur(3px);z-index:200;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.cfy-modal-mask.on{display:flex;}
+.cfy-modal{
+  background:#fff;border-radius:16px;max-width:520px;width:100%;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.4);
+  max-height:84vh;overflow:auto;position:relative;
+}
+.cfy-modal h3{margin:0 0 12px;font-size:19px;}
+.cfy-modal p{font-size:13.5px;color:var(--cfy-mute);margin:0 0 14px;text-align:justify;}
+.cfy-modal-close{
+  position:absolute;right:14px;top:13px;width:32px;height:32px;border-radius:50%;border:1px solid var(--cfy-line);
+  background:#fff;font-size:16px;color:var(--cfy-mute);line-height:1;
+}
+.cfy-modal-field{margin-bottom:12px;}
+.cfy-modal-field label{display:block;font-size:12.5px;margin-bottom:5px;color:var(--cfy-ink-3);font-weight:600;}
+.cfy-modal-field input,.cfy-modal-field textarea{
+  width:100%;border:1px solid var(--cfy-line);border-radius:9px;padding:10px 12px;font-size:13px;
+  font-family:inherit;outline:none;background:#fafbfc;color:var(--cfy-ink);
+}
+.cfy-modal-field textarea{resize:vertical;min-height:84px;}
+.cfy-modal-field input:focus,.cfy-modal-field textarea:focus{border-color:var(--cfy-red);background:#fff;}
+.cfy-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);background:#101820;color:#fff;
+  font-size:13px;padding:11px 22px;border-radius:99px;box-shadow:0 14px 34px rgba(0,0,0,.35);
+  opacity:0;pointer-events:none;transition:.3s;z-index:300;max-width:88vw;text-align:center;
+}
+.cfy-toast.on{opacity:1;transform:translate(-50%,0);}
+.cfy-totop{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;border:none;
+  background:var(--cfy-red);color:#fff;display:grid;place-items:center;z-index:120;
+  box-shadow:0 10px 24px rgba(217,44,58,.4);opacity:0;pointer-events:none;transition:.3s;
+}
+.cfy-totop.on{opacity:1;pointer-events:auto;}
+.cfy-totop svg{width:16px;height:16px;}
+
+/* 作者弹窗内容 */
+.cfy-amodal-head{display:flex;gap:14px;align-items:center;margin-bottom:14px;}
+.cfy-amodal-head .cfy-avatar{width:56px;height:56px;}
+.cfy-amodal-head h3{margin:0;}
+.cfy-amodal-head span{font-size:12px;color:var(--cfy-red);}
+.cfy-amodal-skill{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;}
+.cfy-amodal-works{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13px;}
+.cfy-amodal-works li{padding:9px 12px;background:#f7f9fb;border-radius:8px;color:var(--cfy-ink-3);}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .cfy-hero-inner{grid-template-columns:minmax(0,1fr);gap:36px;padding:44px 22px 52px;}
+  .cfy-hero-visual{max-width:560px;}
+  .cfy-focus-grid{grid-template-columns:minmax(0,1fr);}
+  .cfy-parse-wrap{grid-template-columns:minmax(0,1fr);gap:28px;}
+  .cfy-parse-aside{position:static;}
+  .cfy-topic-card.wide{grid-template-columns:minmax(0,1fr);}
+  .cfy-topic-card.wide .cfy-topic-fig{aspect-ratio:16/9;min-height:0;}
+  .cfy-bottom-grid{grid-template-columns:minmax(0,1fr);}
+  .cfy-footer-top{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .cfy-search{width:200px;}
+}
+@media (max-width:860px){
+  .cfy-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--cfy-line);
+    flex-direction:column;align-items:stretch;padding:10px 16px 16px;gap:2px;box-shadow:0 18px 30px rgba(0,0,0,.08);
+  }
+  .cfy-nav.open{display:flex;}
+  .cfy-nav a{padding:11px 12px;font-size:14.5px;border-radius:9px;}
+  .cfy-header-inner{position:relative;gap:14px;}
+  .cfy-burger{display:block;margin-left:auto;}
+  .cfy-search{width:100%;order:5;flex:1 0 100%;display:none;}
+  .cfy-search.open{display:block;}
+  .cfy-author-grid,.cfy-comment-grid,.cfy-topic-grid{grid-template-columns:minmax(0,1fr);}
+  .cfy-video-row{grid-template-columns:40px minmax(0,1fr);gap:12px;padding:18px;}
+  .cfy-video-op{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between;}
+  .cfy-video-nums{text-align:left;}
+  .cfy-news{padding:28px 22px;}
+  .cfy-news-item{grid-template-columns:minmax(0,1fr);gap:4px;}
+  .cfy-news-tag{justify-self:start;margin-top:6px;}
+  .cfy-hero-stats{max-width:100%;}
+  .cfy-footer-top{grid-template-columns:minmax(0,1fr);}
+}
+@media (max-width:520px){
+  .cfy-hero-float{display:none;}
+  .cfy-side-item{grid-template-columns:minmax(0,1fr) 74px;}
+  .cfy-side-thumb{width:74px;}
+  .cfy-hero-stats{grid-template-columns:minmax(0,1fr);gap:12px;}
+  .cfy-stat b{font-size:23px;}
+  .cfy-author-card{grid-template-columns:52px minmax(0,1fr);padding:18px;}
+  .cfy-avatar{width:52px;height:52px;}
+  .cfy-partner-row{grid-template-columns:minmax(0,1fr);}
+  .cfy-section{padding:48px 18px;}
+  .cfy-parse-wrap{padding:48px 18px;}
+  .cfy-notice-inner{padding:8px 16px;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="cfy-sticky-shell">
+  <div class="cfy-notice">
+    <div class="cfy-notice-inner">
+      <span class="cfy-notice-tag">官方发布</span>
+      <div class="cfy-notice-txt">《罪虐都市》第三季 <b>「暗巷回声」</b> 全 24 集已上线，11 月 22 日更新第 17—20 集；「都市罪案短剧创作赛」报名通道同步开启。</div>
+      <a class="cfy-notice-link" href="#cfy-news">查看企业动态</a>
+    </div>
+  </div>
+
+  <header class="cfy-header">
+    <div class="cfy-header-inner">
+      <a class="cfy-brand" href="#cfy-top" aria-label="超凡影业短剧罪虐都市官方网站首页">
+        <span class="cfy-brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v3H5zm0 6.5h10.5v3H5zM5 17h14v3H5z" fill="#ff4d5c"/></svg>
+        </span>
+        <span>
+          <span class="cfy-brand-name">超凡<em>影业</em></span>
+          <span class="cfy-brand-sub">CHAOFAN STUDIO</span>
+        </span>
+      </a>
+
+      <nav class="cfy-nav" id="cfy-nav" aria-label="主导航">
+        <a href="#cfy-focus">焦点剧集</a>
+        <a href="#cfy-videos">热播榜</a>
+        <a href="#cfy-parse">都市罪案解析</a>
+        <a href="#cfy-topics">专题企划</a>
+        <a href="#cfy-authors">创作者</a>
+        <a href="#cfy-voices">观众口碑</a>
+        <a href="#cfy-faq">帮助中心</a>
+      </nav>
+
+      <div class="cfy-search" id="cfy-search">
+        <input type="search" id="cfy-search-input" placeholder="搜索剧集 / 创作者 / 专题" aria-label="站内搜索">
+        <button class="cfy-search-btn" id="cfy-search-btn" aria-label="搜索">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        </button>
+        <div class="cfy-search-hint" id="cfy-search-hint" role="status"></div>
+      </div>
+
+      <button class="cfy-burger" id="cfy-burger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<main id="cfy-top">
+
+  <!-- 首屏 -->
+  <section class="cfy-hero" aria-labelledby="cfy-hero-h1">
+    <div class="cfy-hero-inner">
+      <div>
+        <span class="cfy-hero-eyebrow"><i></i>超凡影业 · 都市罪案短剧官方网站</span>
+        <h1 class="cfy-hero-title" id="cfy-hero-h1">超凡影业短剧<span class="cfy-hl">罪虐都市</span></h1>
+        <p class="cfy-hero-slogan">在霓虹与暗巷之间，记录每一桩真实的都市罪与罚</p>
+        <p class="cfy-hero-intro">作为国内领先的短剧品牌，<strong>超凡影业官方网站</strong>专注都市罪案与情感悬疑赛道，以电影级制作标准持续推出原创高清短剧。我们为创作者与企业搭建高品质内容生态，用一个个发生在城市褶皱里的故事，呈现人性的复杂与温度，让「罪虐都市」成为用户首选的都市罪案短剧社区。</p>
+        <div class="cfy-hero-actions">
+          <a class="cfy-btn cfy-btn-primary" href="#cfy-videos">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="#fff"/></svg>
+            观看热播剧集
+          </a>
+          <a class="cfy-btn cfy-btn-ghost" href="#cfy-topics">查看专题企划</a>
+          <button class="cfy-btn cfy-btn-ghost" id="cfy-open-submit-1" type="button">投稿入口</button>
+        </div>
+        <div class="cfy-hero-stats">
+          <div class="cfy-stat"><b>96<small>部</small></b><span>原创短剧作品</span></div>
+          <div class="cfy-stat"><b>4.8<small>亿</small></b><span>累计剧集播放</span></div>
+          <div class="cfy-stat"><b>126<small>位</small></b><span>签约创作者</span></div>
+        </div>
+      </div>
+
+      <div class="cfy-hero-visual">
+        <div class="cfy-hero-float"><b>豆瓣 8.6</b>罪虐都市·暗巷回声</div>
+        <div class="cfy-hero-frame">
+          <svg viewBox="0 0 640 500" role="img" aria-label="罪虐都市第三季暗巷回声的雨夜街区主视觉，霓虹灯箱与撑伞人影">
+            <defs>
+              <linearGradient id="cfySky1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0b1420"/><stop offset="100%" stop-color="#1b2a3a"/>
+              </linearGradient>
+              <linearGradient id="cfyNeon1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff5a68"/><stop offset="100%" stop-color="#ffb347"/>
+              </linearGradient>
+              <linearGradient id="cfyGlass1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2b3d52"/><stop offset="100%" stop-color="#132030"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="500" fill="url(#cfySky1)"/>
+            <circle cx="500" cy="90" r="52" fill="#203449" opacity=".7"/>
+            <g opacity=".55">
+              <rect x="30" y="150" width="90" height="300" fill="#111d2a"/>
+              <rect x="132" y="106" width="74" height="344" fill="#16232f"/>
+              <rect x="218" y="176" width="104" height="274" fill="#101c28"/>
+              <rect x="486" y="132" width="122" height="318" fill="#14212d"/>
+            </g>
+            <g fill="#ffd479" opacity=".85">
+              <rect x="44" y="180" width="10" height="12"/><rect x="66" y="180" width="10" height="12"/>
+              <rect x="44" y="212" width="10" height="12"/><rect x="88" y="212" width="10" height="12"/>
+              <rect x="146" y="140" width="10" height="14"/><rect x="172" y="140" width="10" height="14"/>
+              <rect x="146" y="182" width="10" height="14"/><rect x="182" y="214" width="10" height="14"/>
+              <rect x="234" y="210" width="12" height="16"/><rect x="266" y="210" width="12" height="16"/>
+              <rect x="234" y="256" width="12" height="16"/><rect x="298" y="256" width="12" height="16"/>
+              <rect x="506" y="170" width="12" height="16"/><rect x="546" y="170" width="12" height="16"/>
+              <rect x="506" y="216" width="12" height="16"/><rect x="576" y="216" width="12" height="16"/>
+            </g>
+            <rect x="360" y="120" width="150" height="82" rx="6" fill="url(#cfyNeon1)" opacity=".18"/>
+            <rect x="364" y="124" width="142" height="74" rx="5" fill="none" stroke="url(#cfyNeon1)" stroke-width="2.4"/>
+            <text x="435" y="168" text-anchor="middle" fill="#ff8b95" font-family="PingFang SC, sans-serif" font-size="27" font-weight="700" letter-spacing="4">罪虐都市</text>
+            <rect x="0" y="392" width="640" height="108" fill="#0c151f"/>
+            <g opacity=".35" stroke="#5a94c4" stroke-width="1.2">
+              <path d="M0 430h640"/><path d="M0 462h640"/>
+            </g>
+            <g>
+              <ellipse cx="252" cy="470" rx="34" ry="9" fill="#ff5a68" opacity=".28"/>
+              <circle cx="252" cy="392" r="17" fill="#24384c"/>
+              <path d="M252 409c-20 0-32 14-32 34v30h64v-30c0-20-12-34-32-34z" fill="#1a2a3a"/>
+              <path d="M214 388c0-22 17-38 38-38s38 16 38 38" fill="none" stroke="#2d4a66" stroke-width="4"/>
+              <rect x="196" y="400" width="112" height="7" rx="3.5" fill="#ff5a68" opacity=".75"/>
+            </g>
+            <g opacity=".5" fill="#8fb6d8">
+              <circle cx="120" cy="80" r="2"/><circle cx="180" cy="46" r="1.6"/><circle cx="300" cy="66" r="2.2"/>
+              <circle cx="380" cy="40" r="1.5"/><circle cx="560" cy="70" r="2"/>
+              <path d="M100 120l-6 26M150 100l-6 26M330 110l-6 26M520 130l-6 26M580 96l-6 26" stroke="#8fb6d8" stroke-width="1.6" opacity=".6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="cfy-hero-badge">
+          <span class="cfy-play-dot"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="#fff"/></svg></span>
+          <span><b>第 17 集 · 雨夜证词</b><br>21:42 · 高清正版</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="cfy-section" id="cfy-focus" aria-labelledby="cfy-focus-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">Focus · 焦点剧集</span>
+      <h2 id="cfy-focus-h2">罪虐都市焦点剧集与主题企划</h2>
+      <p class="cfy-section-desc">超凡影业短剧罪虐都市以都市罪案为叙事核心，本季围绕旧城拆迁、证物保管与跨境洗钱三条线索展开。以下是编辑部本周重点推荐的高清正版剧集，全部由品牌自有团队原创制作。</p>
+    </div>
+
+    <div class="cfy-focus-grid">
+      <article class="cfy-focus-main">
+        <figure>
+          <svg viewBox="0 0 800 450" role="img" aria-label="罪虐都市第三季暗巷回声主海报，审讯室冷光与桌面证物档案">
+            <defs>
+              <linearGradient id="cfyRoom2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e2c3b"/><stop offset="100%" stop-color="#0e1822"/>
+              </linearGradient>
+              <radialGradient id="cfyLamp2" cx="50%" cy="0%" r="80%">
+                <stop offset="0%" stop-color="#ffe0a3" stop-opacity=".5"/><stop offset="100%" stop-color="#ffe0a3" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="800" height="450" fill="url(#cfyRoom2)"/>
+            <rect width="800" height="450" fill="url(#cfyLamp2)"/>
+            <path d="M330 0h140l70 118H260z" fill="#f6d79a" opacity=".12"/>
+            <g stroke="#33506b" stroke-width="2" opacity=".5">
+              <path d="M0 300h800"/><path d="M0 340h800"/>
+            </g>
+            <rect x="120" y="248" width="560" height="12" rx="4" fill="#2b4159"/>
+            <g>
+              <rect x="190" y="200" width="88" height="52" rx="4" fill="#e8dcc2" transform="rotate(-6 234 226)"/>
+              <rect x="200" y="212" width="52" height="5" fill="#8c7d63" transform="rotate(-6 234 226)"/>
+              <rect x="200" y="226" width="66" height="5" fill="#a89a80" transform="rotate(-6 234 226)"/>
+              <rect x="300" y="214" width="74" height="40" rx="4" fill="#cfd8e2" transform="rotate(4 337 234)"/>
+              <circle cx="318" cy="234" r="9" fill="#8fa0b3"/>
+              <rect x="410" y="196" width="110" height="60" rx="6" fill="#f2f4f7" transform="rotate(-2 465 226)"/>
+              <rect x="422" y="212" width="58" height="6" fill="#b3bcc7"/>
+              <rect x="422" y="226" width="80" height="6" fill="#cdd4dc"/>
+              <rect x="422" y="240" width="44" height="6" fill="#aeb8c3"/>
+            </g>
+            <g>
+              <circle cx="596" cy="150" r="36" fill="#2a3f55"/>
+              <path d="M596 116a34 34 0 010 68z" fill="#1d2d3e"/>
+              <rect x="560" y="182" width="74" height="70" rx="18" fill="#243748"/>
+            </g>
+            <rect x="640" y="60" width="128" height="60" rx="4" fill="#14202c"/>
+            <text x="704" y="86" text-anchor="middle" fill="#ff8b95" font-family="PingFang SC, sans-serif" font-size="17" font-weight="700">第17集</text>
+            <text x="704" y="108" text-anchor="middle" fill="#8fa6bb" font-family="PingFang SC, sans-serif" font-size="12" letter-spacing="2">雨夜证词</text>
+            <rect x="0" y="400" width="800" height="50" fill="#0a1220" opacity=".85"/>
+            <text x="40" y="432" fill="#9fb3c7" font-family="PingFang SC, sans-serif" font-size="14" letter-spacing="3">超凡影业 · 原创都市罪案短剧</text>
+          </svg>
+          <figcaption class="cfy-fig-cap">第三季 · 暗巷回声</figcaption>
+        </figure>
+        <div class="cfy-focus-body">
+          <div class="cfy-tagrow">
+            <span class="cfy-tag red">本季主推</span>
+            <span class="cfy-tag">都市罪案</span>
+            <span class="cfy-tag">高清正版</span>
+            <span class="cfy-tag">悬疑</span>
+          </div>
+          <h3>《罪虐都市·暗巷回声》第17集：雨夜证词</h3>
+          <p>一桩被判定为意外的旧案，因一份遗落在证物室的录音笔而重新被翻开。刑警季栖在雨夜重返拆迁巷，发现当年的目击者竟都搬进了同一栋回迁楼。本集采用双线叙事，把程序正义与情感执念并置，导演组用一段近四分钟的长镜头完成了嫌疑人口供的自我推翻。作为品牌年度重点作品，该集上线 12 小时站内播放突破 680 万。</p>
+          <div class="cfy-meta">
+            <span class="cfy-author-dot">季</span>
+            <span>导演 · 季栖</span>
+            <span>2026-11-22 20:00 更新</span>
+            <span>播放 682.4 万</span>
+          </div>
+          <div class="cfy-actions">
+            <button class="cfy-chip cfy-like-btn" type="button" data-count="48210">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+              <span class="cfy-like-num">48210</span> 点赞
+            </button>
+            <button class="cfy-chip cfy-fav-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4z"/></svg>
+              收藏
+            </button>
+            <button class="cfy-chip" type="button" data-share="罪虐都市·暗巷回声 第17集">分享</button>
+            <button class="cfy-chip" type="button" data-open-comment="罪虐都市·暗巷回声 第17集">展开讨论</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="cfy-focus-side">
+        <article class="cfy-side-item">
+          <div>
+            <h4>《旧城档案》第 8 集：拆迁办的三通电话</h4>
+            <p>一叠未归档的通话记录，牵出十年前的片区改造利益链。</p>
+            <div class="cfy-meta"><span>纪实向</span><span>播放 214.6 万</span></div>
+          </div>
+          <div class="cfy-side-thumb">
+            <svg viewBox="0 0 200 150" role="img" aria-label="旧城档案第8集封面，拆迁楼与三通电话线索图">
+              <rect width="200" height="150" fill="#2c3a48"/>
+              <rect x="24" y="52" width="60" height="98" fill="#3b4c5e"/>
+              <rect x="96" y="30" width="76" height="120" fill="#33445a"/>
+              <g fill="#ffd479" opacity=".8">
+                <rect x="34" y="66" width="9" height="10"/><rect x="56" y="66" width="9" height="10"/>
+                <rect x="34" y="90" width="9" height="10"/><rect x="66" y="90" width="9" height="10"/>
+                <rect x="110" y="50" width="9" height="12"/><rect x="140" y="50" width="9" height="12"/>
+                <rect x="110" y="82" width="9" height="12"/>
+              </g>
+              <path d="M30 30c20-14 46-14 66 0" stroke="#ff6b76" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M44 42c12-8 30-8 42 0" stroke="#ff6b76" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </article>
+        <article class="cfy-side-item">
+          <div>
+            <h4>《证物室手记》第 5 集：编号 07 的钥匙</h4>
+            <p>道具组复刻的真实钥匙整整做了 11 把，只为一场雨中特写。</p>
+            <div class="cfy-meta"><span>创作幕后</span><span>播放 178.2 万</span></div>
+          </div>
+          <div class="cfy-side-thumb">
+            <svg viewBox="0 0 200 150" role="img" aria-label="证物室手记封面，钥匙与证物袋特写">
+              <rect width="200" height="150" fill="#1f2b38"/>
+              <rect x="34" y="34" width="132" height="86" rx="6" fill="#e8edf2" opacity=".1" stroke="#5d7f9f" stroke-dasharray="6 4"/>
+              <circle cx="86" cy="70" r="14" fill="none" stroke="#ffb347" stroke-width="6"/>
+              <path d="M100 70h46M136 70v14M146 70v10" stroke="#ffb347" stroke-width="6" stroke-linecap="round"/>
+              <text x="100" y="132" text-anchor="middle" fill="#8fa6bb" font-family="PingFang SC, sans-serif" font-size="12">编号 07 · 证物</text>
+            </svg>
+          </div>
+        </article>
+        <article class="cfy-side-item">
+          <div>
+            <h4>《目击者》第 12 集：凌晨四点的便利店</h4>
+            <p>一段监控录像里被反复忽略的背影，成为案件的转折点。</p>
+            <div class="cfy-meta"><span>悬疑推理</span><span>播放 156.9 万</span></div>
+          </div>
+          <div class="cfy-side-thumb">
+            <svg viewBox="0 0 200 150" role="img" aria-label="目击者第12集封面，便利店冷光与监控画面分割">
+              <rect width="200" height="150" fill="#14202c"/>
+              <rect x="16" y="26" width="168" height="100" fill="#1d2d3d" stroke="#3a5872"/>
+              <rect x="16" y="26" width="168" height="16" fill="#2a3d52"/>
+              <circle cx="26" cy="34" r="3" fill="#ff5a68"/>
+              <g stroke="#4f7ba3" stroke-width="1">
+                <path d="M16 66h168M16 96h168M72 26v100M128 26v100"/>
+              </g>
+              <circle cx="150" cy="76" r="12" fill="#2b4257"/>
+              <path d="M150 88c-10 0-16 8-16 18h32c0-10-6-18-16-18z" fill="#2b4257"/>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热播视频列表 -->
+  <section class="cfy-section cfy-alt" id="cfy-videos" aria-labelledby="cfy-videos-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">Ranking · 都市罪案热播榜</span>
+      <h2 id="cfy-videos-h2">罪虐都市热播短剧榜单</h2>
+      <p class="cfy-section-desc">榜单由站内播放、完播率与观众口碑加权生成，每周一更新。所有条目均为超凡影业短剧罪虐都市社区正版高清内容，支持收藏与分享。</p>
+    </div>
+
+    <div class="cfy-video-list">
+      <div class="cfy-video-row">
+        <div class="cfy-rank">01</div>
+        <div class="cfy-video-main">
+          <h4>《罪虐都市·暗巷回声》第 17 集：雨夜证词</h4>
+          <p>旧案重开，录音笔里的第二个人声让所有推断归零。本集以一场雨中对峙收尾，为后续三集埋下关键伏笔。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag red">都市罪案</span><span class="cfy-tag">季栖导演</span><span class="cfy-tag">本季主推</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>682.4万</b><br>点赞 <b>4.8万</b> · 收藏 <b>1.9万</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="48210">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">48210</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cfy-video-row">
+        <div class="cfy-rank">02</div>
+        <div class="cfy-video-main">
+          <h4>《旧城档案》第 8 集：拆迁办的三通电话</h4>
+          <p>以真实旧改片区为样本改编，用三通电话串起利益链条。编剧组采访了 6 位基层工作人员，剧本修改到第 9 稿。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag">行业观察</span><span class="cfy-tag">城市探索</span><span class="cfy-tag">真人改编</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>214.6万</b><br>点赞 <b>1.6万</b> · 收藏 <b>7,320</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="16350">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">16350</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cfy-video-row">
+        <div class="cfy-rank">03</div>
+        <div class="cfy-video-main">
+          <h4>《证物室手记》第 5 集：编号 07 的钥匙</h4>
+          <p>创作幕后向短片。美术组讲解如何用 3 天时间还原一间 2003 年的证物保管室，包括台账纸张的油墨做旧方法。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag">创作幕后</span><span class="cfy-tag">实用技巧</span><span class="cfy-tag">匠心</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>178.2万</b><br>点赞 <b>1.2万</b> · 收藏 <b>8,901</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="12380">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">12380</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cfy-video-row">
+        <div class="cfy-rank">04</div>
+        <div class="cfy-video-main">
+          <h4>《目击者》第 12 集：凌晨四点的便利店</h4>
+          <p>单场景悬疑实验集，全片 90% 镜头在不到 20 平米的便利店内完成。音效设计用冰柜低频噪音制造持续压迫感。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag">悬疑推理</span><span class="cfy-tag">单场景</span><span class="cfy-tag">情感故事</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>156.9万</b><br>点赞 <b>9,840</b> · 收藏 <b>6,210</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="9840">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">9840</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cfy-video-row">
+        <div class="cfy-rank">05</div>
+        <div class="cfy-video-main">
+          <h4>《深夜法庭》第 3 集：被告席上的母亲</h4>
+          <p>一桩未成年监护权争夺案，法庭戏与家庭戏交叉剪辑。剧本顾问来自一线家事审判团队，台词经过两轮法律校核。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag">情感故事</span><span class="cfy-tag">法律科普</span><span class="cfy-tag">人物访谈</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>132.5万</b><br>点赞 <b>7,610</b> · 收藏 <b>5,480</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="7610">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">7610</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cfy-video-row">
+        <div class="cfy-rank">06</div>
+        <div class="cfy-video-main">
+          <h4>《街区十二时》第 9 集：夜市里的第四个人</h4>
+          <p>以城市夜市为舞台的群像悬疑，用 12 小时时间结构推进。摄影组全程手持跟拍，保留大量真实环境声。</p>
+          <div class="cfy-tagrow"><span class="cfy-tag">城市探索</span><span class="cfy-tag">群像叙事</span><span class="cfy-tag">治愈影像</span></div>
+        </div>
+        <div class="cfy-video-op">
+          <div class="cfy-video-nums">播放 <b>118.7万</b><br>点赞 <b>6,450</b> · 收藏 <b>4,190</b></div>
+          <button class="cfy-chip cfy-like-btn" type="button" data-count="6450">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0112 8a3.8 3.8 0 017 2.8C19 15.7 12 20 12 20z"/></svg>
+            <span class="cfy-like-num">6450</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析 -->
+  <section class="cfy-parse" id="cfy-parse" aria-labelledby="cfy-parse-h2">
+    <div class="cfy-parse-wrap">
+      <aside class="cfy-parse-aside" aria-label="罪虐都市关键词速览">
+        <h3>关键词速览</h3>
+        <ul>
+          <li><b>都市罪案</b>以城市空间为叙事母题的短剧类型</li>
+          <li><b>罪虐都市</b>超凡影业短剧系列品牌名</li>
+          <li><b>高清正版</b>品牌全量内容支持高清播放</li>
+          <li><b>内容生态</b>创作者、观众与企业的长期共建</li>
+        </ul>
+        <div class="cfy-aside-note">本栏目由超凡影业品牌内容中心编辑维护，持续更新短剧行业观察与创作方法论。</div>
+      </aside>
+
+      <div class="cfy-parse-body">
+        <span class="cfy-kicker">Insight · 深度解析</span>
+        <h2 id="cfy-parse-h2">读懂罪虐都市：都市罪案短剧的叙事纵深</h2>
+        <p>「超凡影业短剧罪虐都市」并不是一个简单的剧集命名，它是品牌对都市罪案这一垂直领域的长期投入与系统表达。作为一家持续运营的短剧企业，超凡影业在官方网站上公开了每一季的创作手记、剧本结构与制作标准，希望把「罪虐都市」做成一个可被反复讨论的内容生态，而不是一次性的流量产品。对观众来说，这里是高清正版剧集的首播阵地；对创作者来说，这里是可以投稿、报名、上传作品并接受公开点评的社区。</p>
+
+        <h3>都市空间为何成为罪案叙事的最佳容器</h3>
+        <p>城市是陌生人密度最高、规则最细密的空间。写字楼、回迁楼、地下车库、24 小时便利店、夜市与旧改片区，这些场景天生带有信息差与权力结构，因此非常适合承载悬疑与冲突。罪虐都市系列在选景上有一条内部原则：每集至少出现一个真实可辨认的城市功能空间，并且必须使用它的真实运行逻辑来推动剧情。例如《旧城档案》里的拆迁办，不是作为背景板存在，而是让三通电话的时间戳成为破案的关键；《目击者》里的便利店，则用夜班交接、临期食品下架、监控回看这些日常流程完成叙事反转。这样的处理让都市罪案不悬浮，观众能在熟悉的街道里感到真实的紧张，这也是品牌坚持「真实」与「专业」两个关键词的原因。</p>
+
+        <h3>从短剧节奏到电影级制作标准的平衡</h3>
+        <p>短剧天然要求密度：前 30 秒必须建立悬念，3 分钟内必须完成一次反转。但罪虐都市系列并不满足于快节奏，而是试图在单集 18 到 24 分钟的体量里保持电影级的制作标准。以第三季为例，摄影组使用统一的主光基调与色温方案，夜景占比达到 41%；美术组为「证物室」这一主场景建立了完整的台账体系，连纸张的油墨晕染方式都做了做旧测试；声音团队则录制了 27 组城市环境声，用于不同街区的声场区分。这些工作在单集里未必被观众明确感知，却共同构成了「品质」这件事的底层支撑。超凡影业官方网站之所以公开这些幕后细节，是希望行业与观众都能看到：短剧不等于粗糙，垂直领域的精品内容同样需要匠心。</p>
+
+        <h3>内容生态如何让罪虐都市长出来</h3>
+        <p>一个品牌剧集的生命力，最终来自社区。超凡影业短剧罪虐都市在站内设置了固定投稿入口，创作者可以提交原创剧本、成片或片段，经编辑部初审后进入「都市罪案创作赛」的公开评审。2026 年秋季赛共收到 1,842 份投稿，其中 26 位创作者进入签约池，7 个故事片段被反向吸收进第四季的支线开发。与此同时，观众在评论区提出的推理漏洞与细节讨论，也会被编剧组整理成「观众校核清单」，用于下一轮的剧本打磨。这种创作者、观众、企业三方共建的机制，让罪虐都市从一个作品名逐渐长成一个有生命力的内容生态，也让「用户至上」「持续运营」这些词不只是口号，而是可以落到具体流程里的品牌承诺。</p>
+
+        <h3>为什么观众愿意把它当作首选</h3>
+        <p>口碑来自长期的一致性。罪虐都市系列上线至今保持每周固定更新节奏，所有剧集支持高清正版播放，不插入贴片广告破坏沉浸感；每集片尾固定提供 60 秒创作手记，解释本集的关键叙事选择；评论区则由运营团队真实维护，针对逻辑漏洞的讨论会被置顶并转交编剧组。这些细节让观众感受到被尊重，也让品牌收获了 4.8 亿累计播放与 8.6 的观众评分。面对未来，超凡影业计划在官方网站上开放更完整的剧集资料库，把人物关系、时间线、证物清单做成可检索的公开档案，让都市罪案这一垂直领域拥有更专业的讨论土壤。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="cfy-section cfy-alt" id="cfy-topics" aria-labelledby="cfy-topics-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">Special · 专题企划</span>
+      <h2 id="cfy-topics-h2">罪虐都市专题企划与系列合集</h2>
+      <p class="cfy-section-desc">围绕都市罪案展开的长期企划，覆盖剧本开发、幕后制作与城市田野观察。每个专题由品牌编辑与签约创作者共同维护，持续更新。</p>
+    </div>
+
+    <div class="cfy-topic-grid">
+      <article class="cfy-topic-card wide">
+        <figure class="cfy-topic-fig">
+          <svg viewBox="0 0 700 400" role="img" aria-label="都市罪案创作赛专题主视觉，剧本纸张与分镜草图铺满桌面">
+            <defs>
+              <linearGradient id="cfyDesk3" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2a3340"/><stop offset="100%" stop-color="#161e27"/>
+              </linearGradient>
+            </defs>
+            <rect width="700" height="400" fill="url(#cfyDesk3)"/>
+            <rect x="60" y="70" width="240" height="290" rx="5" fill="#f2ede2" transform="rotate(-4 180 215)"/>
+            <g fill="#9c968a" transform="rotate(-4 180 215)">
+              <rect x="86" y="104" width="120" height="8" rx="4"/>
+              <rect x="86" y="128" width="180" height="6" rx="3"/>
+              <rect x="86" y="146" width="160" height="6" rx="3"/>
+              <rect x="86" y="164" width="176" height="6" rx="3"/>
+              <rect x="86" y="182" width="120" height="6" rx="3"/>
+            </g>
+            <text x="100" y="240" fill="#8a1d28" font-family="PingFang SC, sans-serif" font-size="21" font-weight="700" transform="rotate(-4 180 215)">都市罪案</text>
+            <text x="100" y="270" fill="#8a1d28" font-family="PingFang SC, sans-serif" font-size="21" font-weight="700" transform="rotate(-4 180 215)">创作赛</text>
+            <g transform="rotate(3 470 200)">
+              <rect x="340" y="90" width="290" height="210" rx="5" fill="#efe8da"/>
+              <g stroke="#8b8377" stroke-width="2" fill="none">
+                <rect x="362" y="114" width="70" height="48"/>
+                <rect x="452" y="114" width="70" height="48"/>
+                <rect x="542" y="114" width="66" height="48"/>
+                <path d="M397 186v34h120"/>
+                <circle cx="470" cy="228" r="14"/>
+                <rect x="362" y="248" width="120" height="34"/>
+              </g>
+              <text x="560" y="274" fill="#a08f74" font-family="PingFang SC, sans-serif" font-size="12">分镜 03</text>
+            </g>
+            <circle cx="320" cy="330" r="18" fill="none" stroke="#ffb347" stroke-width="5" opacity=".7"/>
+            <rect x="298" y="52" width="120" height="14" rx="7" fill="#ff5a68" opacity=".8"/>
+          </svg>
+        </figure>
+        <div class="cfy-topic-body">
+          <span class="cfy-status">报名进行中 · 第四期</span>
+          <h3>都市罪案创作赛：把城市褶皱写成 15 分钟</h3>
+          <p>面向全网创作者征集的短片竞赛，要求围绕「真实城市空间」取材，提交 8 至 15 分钟的都市罪案短片或完整剧本。评审团由品牌导演组、编剧组与特邀法律顾问组成，入选作品将在官方网站首发并获得制作基金支持。</p>
+          <ul class="cfy-topic-list">
+            <li>《三通电话》剧本工坊全记录 <span>剧本开发 · 已更新</span></li>
+            <li>评审视角：如何在 3 分钟内建立可信的悬念 <span>实用技巧 · 已更新</span></li>
+            <li>上期入围名单与 7 个片段的后续开发进展 <span>官方发布 · 已更新</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="cfy-topic-card">
+        <figure class="cfy-topic-fig">
+          <svg viewBox="0 0 560 315" role="img" aria-label="城市田野观察专题封面，雨夜中的地铁口与人群剪影">
+            <rect width="560" height="315" fill="#16222e"/>
+            <path d="M0 210h560v105H0z" fill="#0e1720"/>
+            <g fill="#22364a">
+              <rect x="40" y="90" width="80" height="180"/>
+              <rect x="150" y="60" width="66" height="210"/>
+              <rect x="430" y="80" width="96" height="190"/>
+            </g>
+            <g fill="#ffd479" opacity=".8">
+              <rect x="54" y="110" width="10" height="12"/><rect x="82" y="110" width="10" height="12"/>
+              <rect x="54" y="144" width="10" height="12"/><rect x="96" y="144" width="10" height="12"/>
+              <rect x="446" y="104" width="12" height="14"/><rect x="482" y="104" width="12" height="14"/>
+              <rect x="446" y="142" width="12" height="14"/>
+            </g>
+            <rect x="240" y="130" width="82" height="140" fill="#0d1620"/>
+            <path d="M240 130l41-34 41 34z" fill="#223547"/>
+            <circle cx="281" cy="104" r="16" fill="#ff5a68" opacity=".55"/>
+            <rect x="256" y="180" width="50" height="90" fill="#1a2a38"/>
+            <g fill="#33506b">
+              <circle cx="180" cy="258" r="10"/><path d="M164 270h32v34h-32z"/>
+              <circle cx="356" cy="252" r="9"/><path d="M342 262h28v32h-28z"/>
+              <circle cx="404" cy="262" r="11"/><path d="M386 274h36v34h-36z"/>
+            </g>
+            <g stroke="#8fb6d8" stroke-width="1.4" opacity=".5">
+              <path d="M120 40l-8 34M260 30l-8 34M420 44l-8 34M500 30l-8 34"/>
+            </g>
+          </svg>
+        </figure>
+        <div class="cfy-topic-body">
+          <span class="cfy-status">更新至第 6 期</span>
+          <h3>城市田野观察：罪案故事发生的地方</h3>
+          <p>编剧组走进旧改片区、夜市与地铁末班车，记录真实空间的秩序与人情。每期形成一份 6,000 字的田野笔记，作为后续剧集开发的素材库。</p>
+          <ul class="cfy-topic-list">
+            <li>回迁楼里的邻里公约与隐秘默契 <span>在地文化</span></li>
+            <li>末班车乘客的 12 种沉默 <span>日常记录</span></li>
+            <li>夜市摊主口述：凌晨两点的第四个人 <span>人物访谈</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="cfy-topic-card">
+        <figure class="cfy-topic-fig">
+          <svg viewBox="0 0 560 315" role="img" aria-label="幕后工业专题封面，摄影机与灯架在片场的剪影">
+            <rect width="560" height="315" fill="#1c2733"/>
+            <path d="M0 236h560v79H0z" fill="#111a23"/>
+            <g fill="#2c3f52">
+              <rect x="70" y="150" width="96" height="86" rx="6"/>
+              <circle cx="118" cy="132" r="26" fill="#243748"/>
+              <circle cx="118" cy="132" r="13" fill="#4a7899"/>
+              <rect x="52" y="236" width="130" height="12" rx="4"/>
+            </g>
+            <g stroke="#3d5a72" stroke-width="6" fill="none">
+              <path d="M330 236V90h80"/>
+              <path d="M410 90l30-26"/>
+            </g>
+            <rect x="392" y="46" width="60" height="34" rx="4" fill="#33495e"/>
+            <path d="M452 46l24 17-24 17z" fill="#ffb347" opacity=".8"/>
+            <g fill="#ffd479" opacity=".35">
+              <path d="M440 63l110-52v104z"/>
+            </g>
+            <circle cx="500" cy="250" r="14" fill="#2c3f52"/>
+            <path d="M486 262h28v34h-28z" fill="#2c3f52"/>
+            <g fill="#4f7ba3">
+              <rect x="180" y="252" width="16" height="44"/>
+              <rect x="206" y="262" width="16" height="34"/>
+              <rect x="232" y="246" width="16" height="50"/>
+            </g>
+          </svg>
+        </figure>
+        <div class="cfy-topic-body">
+          <span class="cfy-status">长期连载</span>
+          <h3>幕后工业：短剧的每一帧怎么被造出来</h3>
+          <p>从灯光布置到声音设计，从证物道具到服装做旧，系统拆解罪虐都市系列的制作方法。适合影视从业者与深度影迷，每期附一份可下载的制作清单。</p>
+          <ul class="cfy-topic-list">
+            <li>夜景占比 41%：一组可复用的布光方案 <span>实用技巧</span></li>
+            <li>27 组城市环境声是怎么录的 <span>创作幕后</span></li>
+            <li>证物台账的纸张做旧实验记录 <span>匠心</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 作者矩阵 -->
+  <section class="cfy-section" id="cfy-authors" aria-labelledby="cfy-authors-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">Creators · 创作者矩阵</span>
+      <h2 id="cfy-authors-h2">罪虐都市创作者矩阵</h2>
+      <p class="cfy-section-desc">签约导演、编剧与影像创作者是超凡影业内容生态的核心力量。点击「查看档案」可了解他们的创作方法与代表作品。</p>
+    </div>
+
+    <div class="cfy-author-grid">
+      <article class="cfy-author-card">
+        <div class="cfy-avatar">
+          <svg viewBox="0 0 80 80" role="img" aria-label="创作者季栖的头像，深蓝底色与侧脸剪影">
+            <rect width="80" height="80" fill="#28405a"/>
+            <circle cx="40" cy="31" r="14" fill="#e8c9a0"/>
+            <path d="M20 80c0-15 9-24 20-24s20 9 20 24z" fill="#3f5d7c"/>
+            <path d="M26 26c2-11 26-11 28 0-4-4-24-4-28 0z" fill="#1a2a3a"/>
+          </svg>
+        </div>
+        <div class="cfy-author-info">
+          <h3>季栖 <span class="cfy-verify">官方认证</span></h3>
+          <div class="cfy-author-field">导演 · 都市罪案 / 长镜头叙事</div>
+          <p>从业 11 年，擅长用长镜头压缩时间与情绪。罪虐都市系列第一季至第三季导演，主张「让空间替人物说话」。工作日常是带着分镜本在旧城区步行勘景，累计勘景记录超过 400 处。</p>
+          <div class="cfy-author-stats"><span><b>38</b>部作品</span><span><b>86.4万</b>粉丝</span><span><b>4.9</b>口碑</span></div>
+          <button class="cfy-author-more cfy-author-btn" type="button" data-author="jiqi">查看档案</button>
+        </div>
+      </article>
+
+      <article class="cfy-author-card">
+        <div class="cfy-avatar">
+          <svg viewBox="0 0 80 80" role="img" aria-label="创作者宋知行头像，暖橙底色与方框眼镜">
+            <rect width="80" height="80" fill="#b8622f"/>
+            <circle cx="40" cy="32" r="13" fill="#f0d4b4"/>
+            <path d="M20 80c0-15 9-24 20-24s20 9 20 24z" fill="#8c3f20"/>
+            <rect x="26" y="28" width="12" height="8" rx="3" fill="none" stroke="#2b1a12" stroke-width="2"/>
+            <rect x="42" y="28" width="12" height="8" rx="3" fill="none" stroke="#2b1a12" stroke-width="2"/>
+            <path d="M38 32h4" stroke="#2b1a12" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="cfy-author-info">
+          <h3>宋知行 <span class="cfy-verify">官方认证</span></h3>
+          <div class="cfy-author-field">编剧 · 剧本结构 / 法律校核</div>
+          <p>法学背景出身，转行编剧 8 年。负责罪虐都市系列的案件逻辑与台词校核，建立了内部「观众校核清单」机制。相信好的罪案故事不靠巧合推进，而靠人物的每一次真实选择。</p>
+          <div class="cfy-author-stats"><span><b>52</b>部作品</span><span><b>41.2万</b>粉丝</span><span><b>4.8</b>口碑</span></div>
+          <button class="cfy-author-more cfy-author-btn" type="button" data-author="songzhixing">查看档案</button>
+        </div>
+      </article>
+
+      <article class="cfy-author-card">
+        <div class="cfy-avatar">
+          <svg viewBox="0 0 80 80" role="img" aria-label="创作者林见夏头像，青绿色底色与短发轮廓">
+            <rect width="80" height="80" fill="#2f6b63"/>
+            <circle cx="40" cy="33" r="13" fill="#efd0ae"/>
+            <path d="M22 80c0-14 8-23 18-23s18 9 18 23z" fill="#1e4a45"/>
+            <path d="M25 30c0-10 30-10 30 0v8c0-6-30-6-30 0z" fill="#122a27"/>
+          </svg>
+        </div>
+        <div class="cfy-author-info">
+          <h3>林见夏 <span class="cfy-verify">官方认证</span></h3>
+          <div class="cfy-author-field">摄影指导 · 夜景 / 手持跟拍</div>
+          <p>专注夜间影像表达，主导罪虐都市系列全部夜景戏份的布光方案。习惯在勘景时记录街道的真实色温，再转化为分镜里的光比设计。作品多次入选行业影像展映单元。</p>
+          <div class="cfy-author-stats"><span><b>33</b>部作品</span><span><b>29.7万</b>粉丝</span><span><b>4.9</b>口碑</span></div>
+          <button class="cfy-author-more cfy-author-btn" type="button" data-author="linjianxia">查看档案</button>
+        </div>
+      </article>
+
+      <article class="cfy-author-card">
+        <div class="cfy-avatar">
+          <svg viewBox="0 0 80 80" role="img" aria-label="创作者郑照夜头像，紫灰底色与胡子轮廓">
+            <rect width="80" height="80" fill="#4a4266"/>
+            <circle cx="40" cy="31" r="13" fill="#e6c6a2"/>
+            <path d="M20 80c0-15 9-24 20-24s20 9 20 24z" fill="#312b4d"/>
+            <path d="M28 40c4 8 20 8 24 0-4 3-20 3-24 0z" fill="#2a2438"/>
+          </svg>
+        </div>
+        <div class="cfy-author-info">
+          <h3>郑照夜 <span class="cfy-verify">官方认证</span></h3>
+          <div class="cfy-author-field">剪辑指导 · 悬疑节奏 / 声音设计</div>
+          <p>从纪录片剪辑转战短剧，擅长用留白与错位制造悬念。主张「该让观众停半秒的地方绝不剪快」，在罪虐都市系列中建立了一套内部节奏规范，被团队称为「呼吸剪辑法」。</p>
+          <div class="cfy-author-stats"><span><b>47</b>部作品</span><span><b>22.5万</b>粉丝</span><span><b>4.7</b>口碑</span></div>
+          <button class="cfy-author-more cfy-author-btn" type="button" data-author="zhengzhaoye">查看档案</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 观众口碑 -->
+  <section class="cfy-section cfy-alt" id="cfy-voices" aria-labelledby="cfy-voices-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">Voices · 观众口碑</span>
+      <h2 id="cfy-voices-h2">罪虐都市观众评价与社区声音</h2>
+      <p class="cfy-section-desc">来自站内评论区与专题讨论的真实评价，涵盖叙事、表演、制作与社区体验不同维度，未做删改。</p>
+    </div>
+
+    <div class="cfy-comment-grid">
+      <blockquote class="cfy-quote featured">
+        <p>第 17 集那个四分钟长镜头是真的敢拍。嫌疑人的口供在镜头里一点点塌下去，中途没有一次切镜，情绪反而被压得更紧。作为追了两季的老观众，第一次感到「罪虐都市」这个名字不只是噱头。</p>
+        <footer><span class="cfy-qav">周</span><b>周叙白</b> · 追剧 2 季 · 站内评论</footer>
+      </blockquote>
+      <blockquote class="cfy-quote">
+        <p>我是做社区工作的，看《旧城档案》那集特别有代入感。拆迁办的三通电话不是编出来的戏剧冲突，是真实工作里会有的细节。能把这些拍出来，说明编剧真的下过功夫。</p>
+        <footer><span class="cfy-qav">何</span><b>何丽娟</b> · 新观众 · 站内评论</footer>
+      </blockquote>
+      <blockquote class="cfy-quote">
+        <p>幕后那期灯光方案我反复看了三遍，正好在准备自己的作业短片。里面讲夜景不要一味压暗，而是保留两个可控的高光点，这个思路直接救了我的拍摄。</p>
+        <footer><span class="cfy-qav">陈</span><b>陈默</b> · 影视学生 · 专题讨论</footer>
+      </blockquote>
+      <blockquote class="cfy-quote">
+        <p>投过一次稿，虽然没入围，但收到了编辑部一份两页的反馈意见，逐条讲了结构问题和人物动机的漏洞。这种认真程度在短剧平台里不多见，值得信赖。</p>
+        <footer><span class="cfy-qav">苏</span><b>苏一鸣</b> · 投稿创作者 · 站内私信反馈</footer>
+      </blockquote>
+      <blockquote class="cfy-quote">
+        <p>高清播放没贴片广告这点必须夸。现在很多平台开头就插三条广告，看得人心烦。这里点开就是正片，片尾还有创作手记，体验很完整。</p>
+        <footer><span class="cfy-qav">吴</span><b>吴桐</b> · 会员观众 · 站内评论</footer>
+      </blockquote>
+      <blockquote class="cfy-quote">
+        <p>唯一想提的建议是，希望人物关系图能做成可交互的，现在每集都要自己回忆谁是谁。看到官方说要开放剧集资料库，期待一下。</p>
+        <footer><span class="cfy-qav">李</span><b>李青禾</b> · 深度剧迷 · 产品建议</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="cfy-section" id="cfy-news" aria-labelledby="cfy-news-h2">
+    <div class="cfy-news">
+      <span class="cfy-kicker" style="color:#ff8b95;">Updates · 企业动态</span>
+      <h2 id="cfy-news-h2">超凡影业官方发布与企业动态</h2>
+      <p class="cfy-section-desc">品牌公告、内容更新与合作进展，第一时间在官方网站同步。</p>
+      <ul class="cfy-news-list">
+        <li class="cfy-news-item">
+          <span class="cfy-news-date">2026-11-22</span>
+          <h3>《罪虐都市·暗巷回声》更新第 17—20 集<span>全季 24 集，每周六晚 20:00 更新，支持高清正版播放与收藏。</span></h3>
+          <span class="cfy-news-tag">官方发布</span>
+        </li>
+        <li class="cfy-news-item">
+          <span class="cfy-news-date">2026-11-18</span>
+          <h3>都市罪案创作赛第四期报名开启<span>报名截止 12 月 20 日，入选作品将在官方网站首发并获得制作基金。</span></h3>
+          <span class="cfy-news-tag">比赛报名</span>
+        </li>
+        <li class="cfy-news-item">
+          <span class="cfy-news-date">2026-11-11</span>
+          <h3>品牌与三家城市影像机构达成内容合作<span>将在城市田野观察、青年创作者扶持两个方向展开长期合作。</span></h3>
+          <span class="cfy-news-tag">合作进展</span>
+        </li>
+        <li class="cfy-news-item">
+          <span class="cfy-news-date">2026-11-05</span>
+          <h3>剧集资料库内测上线，首批开放 36 集档案<span>包含人物关系、时间线与证物清单，欢迎观众提交校核建议。</span></h3>
+          <span class="cfy-news-tag">产品更新</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 合作 & 投稿 -->
+  <section class="cfy-section cfy-alt" aria-labelledby="cfy-partner-h2">
+    <div class="cfy-bottom-grid">
+      <div class="cfy-partners">
+        <span class="cfy-kicker">Partners · 合作品牌</span>
+        <h2 id="cfy-partner-h2" style="font-size:22px;margin:0 0 8px;">与罪虐都市同行的合作品牌</h2>
+        <p class="cfy-section-desc" style="font-size:13.5px;">品牌长期与城市影像、法律科普与青年创作机构合作，共同推动都市罪案内容生态的品质提升。</p>
+        <div class="cfy-partner-row">
+          <span class="cfy-partner"><i style="background:#2f6b63;">城</i>城市影像archive</span>
+          <span class="cfy-partner"><i style="background:#b8622f;">法</i>明理法律观察</span>
+          <span class="cfy-partner"><i style="background:#4a4266;">青</i>青年短片计划</span>
+          <span class="cfy-partner"><i style="background:#28405a;">夜</i>夜行摄影工作室</span>
+        </div>
+      </div>
+
+      <div class="cfy-submit">
+        <h2>投稿与创意合作入口</h2>
+        <p>如果你也相信城市里藏着值得被讲述的故事，欢迎把剧本、成片或片段提交给超凡影业短剧罪虐都市编辑部。初审周期约 10 个工作日。</p>
+        <ul class="cfy-submit-list">
+          <li>支持剧本、成片、片段三种投稿形式</li>
+          <li>入选作品将在官方网站首发并获得制作支持</li>
+          <li>每份投稿均会收到编辑部的书面反馈</li>
+        </ul>
+        <button class="cfy-btn cfy-btn-primary" id="cfy-open-submit-2" type="button">立即投稿</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="cfy-section" id="cfy-faq" aria-labelledby="cfy-faq-h2">
+    <div class="cfy-section-head">
+      <span class="cfy-kicker">FAQ · 帮助中心</span>
+      <h2 id="cfy-faq-h2">罪虐都市官方帮助中心</h2>
+      <p class="cfy-section-desc">关于剧集观看、投稿、合作与社区规则的常见问题，由品牌运营团队维护。</p>
+    </div>
+    <div class="cfy-faq">
+      <details>
+        <summary>罪虐都市系列在哪里可以观看高清正版？</summary>
+        <p>全部剧集均在本官方网站首发，支持高清正版播放，不插入贴片广告。第三季《暗巷回声》每周六 20:00 更新，已更新剧集可随时回看，收藏后会在个人片单中置顶。</p>
+      </details>
+      <details>
+        <summary>投稿有哪些要求，审核需要多久？</summary>
+        <p>剧本类需提交 3,000 字以上的完整大纲或单集剧本；成片类为 8 至 15 分钟的都市罪案短片，画质不低于 1080P；片段类需注明是否为原创。初审周期约 10 个工作日，编辑部会通过预留联系方式发送书面反馈。</p>
+      </details>
+      <details>
+        <summary>创作赛的评审标准是什么？</summary>
+        <p>评审分为叙事完成度、空间真实性、制作水准与原创性四个维度。评审团由品牌导演组、编剧组与特邀法律顾问组成，重点考察故事是否依托真实城市空间推进，而非依赖巧合。</p>
+      </details>
+      <details>
+        <summary>我可以申请商用授权或联合出品吗？</summary>
+        <p>可以。品牌开放联合出品、城市取景合作与内容二创授权三类合作通道，请在投稿弹窗中选择「合作洽谈」并说明用途，商务团队会在 5 个工作日内回复。</p>
+      </details>
+      <details>
+        <summary>评论区的讨论会被制作团队看到吗？</summary>
+        <p>会。运营团队每日整理评论区关于叙事逻辑与细节的讨论，形成「观众校核清单」转交编剧组。被采纳的高质量讨论会在剧集片尾创作手记中署名致谢。</p>
+      </details>
+      <details>
+        <summary>剧集资料库现在开放了哪些内容？</summary>
+        <p>首批开放 36 集档案，包含人物关系、事件时间线、证物清单与场景地图。资料库目前处于内测阶段，观众可在页面底部提交校核建议，正式版将支持检索与收藏。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="cfy-footer">
+  <div class="cfy-footer-inner">
+    <div class="cfy-footer-top">
+      <div class="cfy-footer-brand">
+        <div class="cfy-brand" style="pointer-events:none;">
+          <span class="cfy-brand-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v3H5zm0 6.5h10.5v3H5zM5 17h14v3H5z" fill="#ff4d5c"/></svg>
+          </span>
+          <span>
+            <span class="cfy-brand-name" style="color:#fff;">超凡<em style="color:#ff5a68;">影业</em></span>
+            <span class="cfy-brand-sub">CHAOFAN STUDIO</span>
+          </span>
+        </div>
+        <p>超凡影业短剧罪虐都市官方网站，专注都市罪案与情感悬疑短剧的原创内容平台。作为持续运营的企业品牌，我们坚持高清正版、用户至上的内容准则，与创作者共同构建值得信赖的都市罪案内容生态。</p>
+      </div>
+      <div class="cfy-footer-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#cfy-focus">焦点剧集</a></li>
+          <li><a href="#cfy-videos">热播榜单</a></li>
+          <li><a href="#cfy-topics">专题企划</a></li>
+          <li><a href="#cfy-parse">深度解析</a></li>
+        </ul>
+      </div>
+      <div class="cfy-footer-col">
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#cfy-authors">创作者矩阵</a></li>
+          <li><a href="#cfy-voices">观众口碑</a></li>
+          <li><a href="#cfy-open-submit-2" id="cfy-footer-submit">投稿入口</a></li>
+          <li><a href="#cfy-news">企业动态</a></li>
+        </ul>
+      </div>
+      <div class="cfy-footer-col">
+        <h4>支持</h4>
+        <ul>
+          <li><a href="#cfy-faq">帮助中心</a></li>
+          <li><a href="#cfy-partner-h2">合作品牌</a></li>
+          <li><a href="#cfy-faq">商用授权</a></li>
+          <li><a href="#cfy-top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cfy-footer-bottom">
+      <span>© 2026 超凡影业（虚构品牌）官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容备案号：CF-YS-2026-0088 · 都市罪案短剧内容生态平台</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 通用弹窗 -->
+<div class="cfy-modal-mask" id="cfy-modal-mask" role="dialog" aria-modal="true" aria-labelledby="cfy-modal-title">
+  <div class="cfy-modal">
+    <button class="cfy-modal-close" id="cfy-modal-close" type="button" aria-label="关闭弹窗">×</button>
+    <div id="cfy-modal-content"></div>
+  </div>
+</div>
+
+<div class="cfy-toast" id="cfy-toast" role="status" aria-live="polite"></div>
+
+<button class="cfy-totop" id="cfy-totop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" aria-hidden="true"><path d="M12 19V6M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('cfy-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('on'); }, 2200);
+  }
+
+  /* 移动端导航 + 搜索展开 */
+  var burger = document.getElementById('cfy-burger');
+  var nav = document.getElementById('cfy-nav');
+  var searchBox = document.getElementById('cfy-search');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      if(searchBox) searchBox.classList.toggle('open', open);
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        if(searchBox) searchBox.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById('cfy-search-input');
+  var searchBtn = document.getElementById('cfy-search-btn');
+  var searchHint = document.getElementById('cfy-search-hint');
+  var searchIndex = [
+    {t:'罪虐都市·暗巷回声 第17集 雨夜证词', k:['罪虐','都市','暗巷','第17','雨夜']},
+    {t:'旧城档案 第8集 拆迁办的三通电话', k:['旧城','档案','拆迁','电话']},
+    {t:'证物室手记 第5集 编号07的钥匙', k:['证物','手记','钥匙']},
+    {t:'目击者 第12集 凌晨四点的便利店', k:['目击者','便利店','凌晨']},
+    {t:'深夜法庭 第3集 被告席上的母亲', k:['深夜','法庭','母亲']},
+    {t:'街区十二时 第9集 夜市里的第四个人', k:['街区','夜市','十二时']},
+    {t:'都市罪案创作赛 第四期报名', k:['创作赛','报名','投稿']},
+    {t:'创作者 季栖 导演档案', k:['季栖','导演','创作者']}
+  ];
+  function runSearch(){
+    if(!searchHint || !searchInput) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '<p>试试搜索「罪虐都市」「创作赛」「季栖」</p>';
+      searchHint.classList.add('on');
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      if(item.t.indexOf(q) > -1) return true;
+      return item.k.some(function(k){ return k.indexOf(q) > -1 || q.indexOf(k) > -1; });
+    });
+    if(hits.length){
+      searchHint.innerHTML = hits.slice(0,5).map(function(h){
+        return '<p class="hit">' + h.t + '</p>';
+      }).join('');
+    } else {
+      searchHint.innerHTML = '<p class="err">未找到「' + q.replace(/[<>&]/g,'') + '」相关内容，可尝试搜索剧集名或创作者昵称。</p>';
+    }
+    searchHint.classList.add('on');
+  }
+  if(searchBtn) searchBtn.addEventListener('click', runSearch);
+  if(searchInput){
+    searchInput.addEventListener('input', runSearch);
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(searchHint && searchHint.classList.contains('on')){
+      var box = document.getElementById('cfy-search');
+      if(box && !box.contains(e.target)) searchHint.classList.remove('on');
+    }
+  });
+
+  /* 点赞 +1 / -1 */
+  document.querySelectorAll('.cfy-like-btn').forEach(function(btn){
+    var numEl = btn.querySelector('.cfy-like-num');
+    var base = parseInt(btn.getAttribute('data-count') || (numEl ? numEl.textContent : '0'), 10) || 0;
+    var active = false;
+    btn.addEventListener('click', function(){
+      active = !active;
+      var next = active ? base + 1 : base;
+      if(numEl) numEl.textContent = String(next);
+      btn.classList.toggle('on', active);
+    });
+  });
+
+  /* 收藏切换 */
+  document.querySelectorAll('.cfy-fav-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      var svg = btn.querySelector('svg');
+      if(svg) svg.setAttribute('fill', on ? 'currentColor' : 'none');
+      if(btn.lastChild && btn.lastChild.nodeType === 3){
+        btn.lastChild.textContent = on ? ' 已收藏' : ' 收藏';
+      }
+      showToast(on ? '已加入你的收藏片单' : '已取消收藏');
+    });
+  });
+
+  /* 弹窗基础 */
+  var mask = document.getElementById('cfy-modal-mask');
+  var content = document.getElementById('cfy-modal-content');
+  var closeBtn = document.getElementById('cfy-modal-close');
+  function openModal(html){
+    if(!mask || !content) return;
+    content.innerHTML = html;
+    mask.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!mask) return;
+    mask.classList.remove('on');
+    document.body.style.overflow = '';
+  }
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', function(e){ if(e.target === mask) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* 分享 */
+  function shareText(title){
+    var url = '';
+    try{
+      url = encodeURIComponent(window.location.href.split('#')[0]);
+    }catch(err){ url = ''; }
+    openModal(
+      '<h3 id="cfy-modal-title">分享《' + title + '》</h3>' +
+      '<p>选择你要分享到的渠道。链接已准备就绪，也可以直接复制到剪贴板。</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">' +
+        '<button class="cfy-btn cfy-btn-primary" data-channel="微信" type="button" style="font-size:13px;padding:9px 18px;">微信</button>' +
+        '<button class="cfy-btn cfy-btn-primary" data-channel="微博" type="button" style="font-size:13px;padding:9px 18px;">微博</button>' +
+        '<button class="cfy-btn cfy-btn-primary" data-channel="QQ" type="button" style="font-size:13px;padding:9px 18px;">QQ</button>' +
+      '</div>' +
+      '<button class="cfy-btn cfy-btn-ghost" id="cfy-copy-link" type="button" style="text-align:center;justify-content:center;border-color:#d8dee6;color:#101820;">复制链接</button>'
+    );
+    content.querySelectorAll('[data-channel]').forEach(function(b){
+      b.addEventListener('click', function(){
+        showToast('已生成' + b.getAttribute('data-channel') + '分享卡片，可在应用内粘贴发送');
+      });
+    });
+    var copyBtn = document.getElementById('cfy-copy-link');
+    if(copyBtn){
+      copyBtn.addEventListener('click', function(){
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(decodeURIComponent(url)).then(function(){
+            showToast('链接已复制到剪贴板');
+          }).catch(function(){
+            showToast('复制失败，请长按地址栏手动复制');
+          });
+        } else {
+          showToast('当前环境不支持自动复制，请手动复制地址栏链接');
+        }
+      });
+    }
+  }
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){ shareText(btn.getAttribute('data-share')); });
+  });
+
+  /* 展开讨论 / 评论弹窗 */
+  document.querySelectorAll('[data-open-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var t = btn.getAttribute('data-open-comment');
+      openModal(
+        '<h3 id="cfy-modal-title">讨论《' + t + '》</h3>' +
+        '<p>社区现有 1,286 条相关讨论，以下为高赞观点节选。</p>' +
+        '<div class="cfy-modal-field"><label for="cfy-cm-input">说点什么</label><textarea id="cfy-cm-input" placeholder="分享你对本集的推理或感受……"></textarea></div>' +
+        '<button class="cfy-btn cfy-btn-primary" id="cfy-cm-send" type="button" style="justify-content:center;width:100%;">发布讨论</button>' +
+        '<div style="margin-top:18px;display:grid;gap:10px;">' +
+          '<div style="background:#f7f9fb;border-radius:10px;padding:12px 14px;font-size:13px;color:#3c4956;">「录音笔里第二个人声出现时我起鸡皮疙瘩了，前面所有推断全被推翻。」<br><span style="font-size:11.5px;color:#8592a0;">— 用户 周叙白</span></div>' +
+          '<div style="background:#f7f9fb;border-radius:10px;padding:12px 14px;font-size:13px;color:#3c4956;">「希望官方赶紧把人物关系图做成可交互的，追到第 17 集已经开始记混了。」<br><span style="font-size:11.5px;color:#8592a0;">— 用户 李青禾</span></div>' +
+        '</div>'
+      );
+      var send = document.getElementById('cfy-cm-send');
+      if(send){
+        send.addEventListener('click', function(){
+          var v = document.getElementById('cfy-cm-input');
+          if(v && v.value.trim()){ showToast('讨论已提交，运营团队会尽快审核'); closeModal(); }
+          else { showToast('请先写下你的讨论内容'); }
+        });
+      }
+    });
+  });
+
+  /* 作者档案弹窗 */
+  var authorData = {
+    jiqi:{name:'季栖',field:'导演 · 都市罪案 / 长镜头叙事',intro:'从业 11 年，擅长用长镜头压缩时间与情绪。罪虐都市系列第一季至第三季导演，主张「让空间替人物说话」。累计勘景记录超过 400 处。',skills:['长镜头','夜景叙事','勘景方法论'],works:['罪虐都市·暗巷回声（导演）','旧城档案（联合导演）','证物室手记（监制）']},
+    songzhixing:{name:'宋知行',field:'编剧 · 剧本结构 / 法律校核',intro:'法学背景出身，转行编剧 8 年。负责罪虐都市系列的案件逻辑与台词校核，建立了内部「观众校核清单」机制。',skills:['剧本结构','法律校核','群像叙事'],works:['旧城档案（总编剧）','深夜法庭（编剧）','目击者（剧本顾问）']},
+    linjianxia:{name:'林见夏',field:'摄影指导 · 夜景 / 手持跟拍',intro:'专注夜间影像表达，主导罪虐都市系列全部夜景戏份的布光方案。习惯在勘景时记录街道真实色温，再转化为分镜里的光比设计。',skills:['夜景布光','手持跟拍','色温设计'],works:['罪虐都市·暗巷回声（摄影指导）','街区十二时（摄影）','目击者（摄影）']},
+    zhengzhaoye:{name:'郑照夜',field:'剪辑指导 · 悬疑节奏 / 声音设计',intro:'从纪录片剪辑转战短剧，擅长用留白与错位制造悬念。主张「该让观众停半秒的地方绝不剪快」，被团队称为「呼吸剪辑法」。',skills:['悬疑节奏','声音设计','留白剪辑'],works:['罪虐都市·暗巷回声（剪辑指导）','深夜法庭（剪辑）','街区十二时（声音设计）']}
+  };
+  document.querySelectorAll('.cfy-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var d = authorData[btn.getAttribute('data-author')];
+      if(!d) return;
+      openModal(
+        '<div class="cfy-amodal-head">' +
+          '<div class="cfy-avatar"><svg viewBox="0 0 80 80" role="img" aria-label="' + d.name + '的档案头像"><rect width="80" height="80" fill="#28405a"/><circle cx="40" cy="31" r="13" fill="#e8c9a0"/><path d="M20 80c0-15 9-24 20-24s20 9 20 24z" fill="#3f5d7c"/></svg></div>' +
+          '<div><h3 id="cfy-modal-title" style="margin:0;">' + d.name + '</h3><span>' + d.field + '</span></div>' +
+        '</div>' +
+        '<p>' + d.intro + '</p>' +
+        '<div class="cfy-amodal-skill">' + d.skills.map(function(s){ return '<span class="cfy-tag">' + s + '</span>'; }).join('') + '</div>' +
+        '<h4 style="font-size:14px;margin:6px 0 10px;">代表作品</h4>' +
+        '<ul class="cfy-amodal-works">' + d.works.map(function(w){ return '<li>' + w + '</li>'; }).join('') + '</ul>'
+      );
+    });
+  });
+
+  /* 投稿入口弹窗 */
+  var submitHtml =
+    '<h3 id="cfy-modal-title">投稿与创意合作</h3>' +
+    '<p>填写基本信息，编辑部会在 10 个工作日内通过你预留的方式反馈初审意见。</p>' +
+    '<div class="cfy-modal-field"><label for="cfy-sub-name">你的昵称</label><input id="cfy-sub-name" type="text" placeholder="例如：陈默"></div>' +
+    '<div class="cfy-modal-field"><label for="cfy-sub-type">投稿类型</label><input id="cfy-sub-type" type="text" placeholder="剧本 / 成片 / 片段 / 合作洽谈"></div>' +
+    '<div class="cfy-modal-field"><label for="cfy-sub-link">作品链接或作品说明</label><textarea id="cfy-sub-link" placeholder="简要说明作品内容与时长，或留下可访问的作品链接"></textarea></div>' +
+    '<button class="cfy-btn cfy-btn-primary" id="cfy-sub-send" type="button" style="justify-content:center;width:100%;">提交投稿</button>';
+  ['cfy-open-submit-1','cfy-open-submit-2'].forEach(function(id){
+    var b = document.getElementById(id);
+    if(b) b.addEventListener('click', function(){ openModal(submitHtml); });
+  });
+  /* 动态绑定投稿发送按钮 */
+  document.addEventListener('click', function(e){
+    if(e.target && e.target.id === 'cfy-sub-send'){
+      var n = document.getElementById('cfy-sub-name');
+      if(n && !n.value.trim()){ showToast('请先填写昵称'); return; }
+      showToast('投稿已提交，编辑部将在 10 个工作日内反馈');
+      closeModal();
+    }
+  });
+  var footerSubmit = document.getElementById('cfy-footer-submit');
+  if(footerSubmit){
+    footerSubmit.addEventListener('click', function(e){ e.preventDefault(); openModal(submitHtml); });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('cfy-totop');
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+    window.addEventListener('scroll', function(){
+      toTop.classList.toggle('on', window.scrollY > 640);
+    }, {passive:true});
+  }
+
+  /* 评论展开（焦点区按钮已绑定），此处补充空评论提示 */
+  document.querySelectorAll('.cfy-chip').forEach(function(c){
+    if(!c.classList.contains('cfy-like-btn') && !c.classList.contains('cfy-fav-btn') && !c.hasAttribute('data-share') && !c.hasAttribute('data-open-comment')){
+      c.addEventListener('click', function(){ showToast('该功能已记录你的操作'); });
+    }
+  });
+
+})();
+</script>
+</body>
+                </html>
